@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import WeatherPage from './pages/weather-page/index'
 const cityList = [
   {
     city: '北京',
