@@ -83,7 +83,9 @@ function getInfoById(dict, id, field) {
 }
 export default {
   name: "App",
-  components: {},
+  components: {
+    WeatherPage
+  },
   data(){
     return {
       cityCode:cityList,

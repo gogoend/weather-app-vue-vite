@@ -63,14 +63,15 @@
     .weather-detail h1{
         margin:0
     }
-    .zz{
-        
-    }
 </style>
 <script>
 export default {
     props:{
-        WeatherInfo:Object
+        weatherInfo:Object
+    },
+    beforeMount(){
+        this;
+        debugger
     }
 }
 </script>
