@@ -16,8 +16,8 @@
 <script>
 import { get } from "../../api/index.js";
 
-import SingleWeatherInfo from "../components/weather-page/single-weather-info.vue";
-import MainWeatherInfo from "../components/weather-page/main-weather-info.vue";
+import SingleWeatherInfo from "../../components/weather-page/single-weather-info.vue";
+import MainWeatherInfo from "../../components/weather-page/main-weather-info.vue";
 
 async function getWeather(cityCode) {
   let { data } = await get("http://restapi.amap.com/v3/weather/weatherInfo", {

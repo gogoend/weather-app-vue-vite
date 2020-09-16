@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import WeatherPage from './pages/weather-page/index'
+import WeatherPage from './pages/weather-page/index.vue'
 const cityList = [
   {
     city: '北京',
