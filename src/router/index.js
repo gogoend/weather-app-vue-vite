@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/home',
+        path: '/home/:code',
         name: 'home',
         component: WeatherPage
     },

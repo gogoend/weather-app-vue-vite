@@ -122,7 +122,7 @@ export default {
   mounted() {
     // eslint-disable-next-line no-debugger
     // debugger
-    this.cityChange(this.city.code);
+    this.cityChange(this.$route.params.code);
     // console.log
   },
   props: {
@@ -148,17 +148,19 @@ export default {
         new Date().getTime() - cachedInfo[newCity].updateTime < 600000
       ) {
         newInfo = cachedInfo[newCity].info;
-        // debugger
       } else {
         newInfo = await getWeather(newCity);
         this.cacheInfo(newCity, newInfo);
       }
 
       this.weatherInfo = newInfo;
+      // eslint-disable-next-line no-debugger
+      debugger
+      this.$router.push(`/home/${newInfo.code}`)
     },
   },
   watch: {
-    city(nVal) {
+    '$route.params.code'(nVal) {
       this.cityChange(nVal.code);
     },
   },
