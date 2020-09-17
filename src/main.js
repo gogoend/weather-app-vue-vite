@@ -1,18 +1,10 @@
-import Vue, { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
-import './reset.css'
+import router from './router'
 
-if (createApp) {
-    createApp(App).mount('#app');
-} else {
-    new Vue({
-        el: '#app',
-        components: {
-            App
-        },
-        render(h) {
-            return h(App)
-        },
-        // template:'<App />'
-    })
-}
+Vue.config.productionTip = false
+
+new Vue({
+    router,
+    render: h => h(App),
+}).$mount('#app')

@@ -8,7 +8,11 @@
         </select>
       </section>
     </nav>
-    <WeatherPage :city="globalCurrentCity" />
+    <router-view></router-view>
+    <nav>
+      <router-link to="/home"> 天气 </router-link>
+    </nav>
+    <!-- <WeatherPage :city="globalCurrentCity" /> -->
   </div>
 </template>
 
@@ -76,6 +80,7 @@ function getInfoById(dict, id, field) {
 export default {
   name: "App",
   components: {
+    // eslint-disable-next-line vue/no-unused-components
     WeatherPage
   },
   data(){
