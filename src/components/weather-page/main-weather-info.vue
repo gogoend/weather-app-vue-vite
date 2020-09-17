@@ -68,10 +68,6 @@
 export default {
     props:{
         weatherInfo:Object
-    },
-    beforeMount(){
-        this;
-        debugger
     }
 }
 </script>

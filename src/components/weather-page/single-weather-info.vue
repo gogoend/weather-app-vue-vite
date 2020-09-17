@@ -1,29 +1,28 @@
 <template>
   <div>
-    <span>{{item.date}} 星期{{item.week === '7' ? '日' : chineseDigi[item.week]}}</span>
+    <span>{{weatherInfo.date}} 星期{{weatherInfo.week === '7' ? '日' : chineseDigi[weatherInfo.week]}}</span>
     <section>
       <header>白天</header>
       <ul>
-        <li>{{item.dayweather}}</li>
-        <li>{{item.daytemp}}℃</li>
-        <li>{{item.daywind}}</li>
-        <li>{{item.daypower}}级</li>
+        <li>{{weatherInfo.dayweather}}</li>
+        <li>{{weatherInfo.daytemp}}℃</li>
+        <li>{{weatherInfo.daywind}}</li>
+        <li>{{weatherInfo.daypower}}级</li>
       </ul>
     </section>
     <section>
       <header>夜间</header>
       <ul>
-        <li>{{item.nightweather}}</li>
-        <li>{{item.nighttemp}}℃</li>
-        <li>{{item.nightwind}}</li>
-        <li>{{item.nightpower}}级</li>
+        <li>{{weatherInfo.nightweather}}</li>
+        <li>{{weatherInfo.nighttemp}}℃</li>
+        <li>{{weatherInfo.nightwind}}</li>
+        <li>{{weatherInfo.nightpower}}级</li>
       </ul>
     </section>
   </div>
 </template>
 
 <script>
-import { watch } from "vue";
 export default {
   data() {
     return {
@@ -39,17 +38,11 @@ export default {
         "八",
         "九",
         "十"
-      ],
-      item: null
+      ]
     };
   },
   props: {
     weatherInfo: Object
-  },
-  watch: {
-    weatherInfo(nVal) {
-      this.item = nVal;
-    }
   }
 };
 </script>
