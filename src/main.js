@@ -1,5 +1,18 @@
-import { createApp } from 'vue'
+import Vue, { createApp } from 'vue'
 import App from './App.vue'
 import './reset.css'
 
-createApp(App).mount('#app')
+if (createApp) {
+    createApp(App).mount('#app');
+} else {
+    new Vue({
+        el: '#app',
+        components: {
+            App
+        },
+        render(h) {
+            return h(App)
+        },
+        // template:'<App />'
+    })
+}

@@ -1,11 +1,3 @@
-<!--
- * @Author: gogoend
- * @Date: 2020-07-07 22:06:19
- * @LastEditors: gogoend
- * @LastEditTime: 2020-07-09 20:56:44
- * @FilePath: \vite-test\src\App.vue
- * @Description: 
---> 
 <template>
   <div className='app-wrap'>
     <nav>
